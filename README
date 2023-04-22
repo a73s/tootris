@@ -14,8 +14,8 @@ Right ctrl - hold piece
 
 Controls (wasd):
 
-Up Arrow - Rotate
-Down Arrow - lower piece
-Left/Right Arrow - left and right
+W - Rotate
+S - lower piece
+A/D - left and right
 Escape - pause/unpause
-Right ctrl - hold piece
+Left ctrl - hold piece
