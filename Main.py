@@ -10,7 +10,7 @@ from board import *
 
 TPS = 30
 PIECESIZE = 30
-
+CONTROLSCHEME = 'default' #default or wasd
 
 def main():
 
@@ -25,6 +25,12 @@ def main():
     heldPiece = None
     swapPiece = 0
     canSwap = 1
+
+    if CONTROLSCHEME == 'default':
+        controls = [pygame.K_UP,pygame.K_LEFT,pygame.K_RIGHT,pygame.K_ESCAPE,pygame.K_RCTRL,pygame.K_DOWN]
+
+    if CONTROLSCHEME == 'wasd':
+        controls = [pygame.K_w,pygame.K_a,pygame.K_d,pygame.K_ESCAPE,pygame.K_LCTRL,pygame.K_s]
 
     #the main game loop
     while True:
@@ -90,21 +96,23 @@ def main():
                 pygame.quit()
                 exit()
             
+            
+
             if event.type == pygame.KEYDOWN:
 
-                if event.key == pygame.K_UP:
+                if event.key == controls[0]:
                     gamePiece.rotate()
 
-                if event.key == pygame.K_LEFT:
+                if event.key == controls[1]:
                     gamePiece.moveLeft()
 
-                if event.key == pygame.K_RIGHT:
+                if event.key == controls[2]:
                     gamePiece.moveRight()
                 
-                if event.key == pygame.K_ESCAPE:
+                if event.key == controls[3]:
                     pauseMenu(window)
                 
-                if event.key == pygame.K_RCTRL:
+                if event.key == controls[4]:
                     if canSwap:
                         swapPiece = 1
 
@@ -113,11 +121,11 @@ def main():
 
         if dropStopper:
 
-            if not pressed[pygame.K_DOWN]:
+            if not pressed[controls[5]]:
                 #this in addition to drop stopper allows the piece to be moved down fast but the input does not apply to the next piece
                 dropStopper = False
         else:
-            if pressed[pygame.K_DOWN]:
+            if pressed[controls[5]]:
                 gamePiece.moveDown()
                 allowMoveDownThisTick = False
 
