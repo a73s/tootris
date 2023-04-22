@@ -4,9 +4,9 @@ Created on Mar 24, 2022
 @author: Adam Seals
 '''
 import pygame
-from Display import *
-from Piece import Piece
-from Board import *
+from display import *
+from piece import Piece
+from board import *
 
 TPS = 30
 PIECESIZE = 30
