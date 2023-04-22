@@ -1,5 +1,5 @@
 import pygame
-from Piece import Block
+from piece import Block
 from math import log
 
 class Board():
