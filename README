@@ -1,2 +1,10 @@
 This is a clone of tetris, I created this for a class project a few years ago. 
 Im mostly uploading this as a way to learn how to use git so dont take this to seriously.
+
+Controls:
+
+Up Arrow - Rotate
+Down Arrow - lower piece
+Left/Right Arrow - left and right
+Escape - pause/unpause
+Right ctrl - hold piece
