@@ -52,16 +52,16 @@ def pauseMenu(window):
         #if you hit escape, the pause menu closes
         for event in pygame.event.get():
 
-                if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT:
                     
-                    pygame.quit()
-                    exit()
+                pygame.quit()
+                exit()
 
-                if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:
                 
-                    if event.key == pygame.K_ESCAPE:
+                if event.key == pygame.K_ESCAPE:
                         
-                        sentinel = False
+                    sentinel = False
 
         pygame.display.flip()
 
