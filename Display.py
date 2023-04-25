@@ -23,14 +23,14 @@ def startMenu(window,icon):
         #if you hit any key, the game starts
         for event in pygame.event.get():
 
-                if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT:
                     
-                    pygame.quit()
-                    exit()
+                pygame.quit()
+                exit()
 
-                if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN:
                 
-                    sentinel = False
+                sentinel = False
 
         pygame.display.flip()
 
